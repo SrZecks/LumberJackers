@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LumberJacker's</title>
+    <link rel="icon" href="imgs/axe.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="w3.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="grid_game">
+        <div class="score_board">
+            <div class="score_board_grid">
+                <div>
+                    <img width="60%" src="imgs/ranking.png">
+                </div>
+                <div>
+                    <img width="60%" src="imgs/lumberjackgame.png">
+                </div>
+                <div>
+                    <img width="60%" src="imgs/loggame.png">
+                </div>
+            </div>
+
+            <div class="score_board_grid">
+                <div>Rank</div>
+                <div>Name</div>
+                <div>Logs</div>
+            </div>
+        </div>
+
+        <div class="login_container_game game w3-center w3-display-container">
+            <div class="score w3-display-topleft">
+                <img class="logs" src="imgs/logs.png"> Logs:
+                <span id="score">0</span>
+            </div>
+            <img id="chop" class="lumberjack" src="imgs/chop/chop1.png" alt="Timber" width="80%">
+        </div>
+    </div>
+
+
+
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <script>
+        var score = 0;
+        var i = 0;
+
+        var chops = {
+            0: "imgs/chop/chop1.png",
+            1: "imgs/chop/chop2.png",
+            2: "imgs/chop/chop3.png",
+            3: "imgs/chop/chop4.png",
+            4: "imgs/chop/chop5.png",
+            5: "imgs/chop/chop6.png",
+            6: "imgs/chop/chop7.png",
+            7: "imgs/chop/chop8.png",
+            8: "imgs/chop/chop9.png",
+            9: "imgs/chop/chop10.png",
+            10: "imgs/chop/chop11.png",
+            11: "imgs/chop/chop12.png",
+        };
+
+        $(window).keyup(function (e) {
+
+            if (e.key == 0 || e.key == 32) {
+
+                $("#chop").attr('src', chops[0]);
+
+                setTimeout(function () {
+                    $("#chop").attr('src', chops[1]);
+                }, 50);
+
+                setTimeout(function () {
+                    $("#chop").attr('src', chops[2]);
+                }, 80);
+
+                setTimeout(function () {
+                    $("#chop").attr('src', chops[3]);
+                }, 120);
+
+                setTimeout(function () {
+                    $("#chop").attr('src', chops[4]);
+                }, 140);
+
+                setTimeout(function () {
+                    $("#chop").attr('src', chops[5]);
+                }, 160);
+
+                setTimeout(function () {
+                    $("#chop").attr('src', chops[6]);
+                }, 180);
+
+                setTimeout(function () {
+                    $("#chop").attr('src', chops[7]);
+                }, 200);
+
+                setTimeout(function () {
+                    $("#chop").attr('src', chops[8]);
+                }, 220);
+
+                setTimeout(function () {
+                    $("#chop").attr('src', chops[9]);
+                }, 240);
+
+                setTimeout(function () {
+                    $("#chop").attr('src', chops[10]);
+                }, 260);
+
+                setTimeout(function () {
+                    $("#chop").attr('src', chops[11]);
+
+                    score++;
+                    $("#score").html(score);
+                }, 300);
+
+
+
+
+
+            }
+        });
+
+        $("#chop").click(function (e) {
+
+            $("#chop").attr('src', chops[0]);
+
+            setTimeout(function () {
+                $("#chop").attr('src', chops[1]);
+            }, 50);
+
+            setTimeout(function () {
+                $("#chop").attr('src', chops[2]);
+            }, 80);
+
+            setTimeout(function () {
+                $("#chop").attr('src', chops[3]);
+            }, 120);
+
+            setTimeout(function () {
+                $("#chop").attr('src', chops[4]);
+            }, 140);
+
+            setTimeout(function () {
+                $("#chop").attr('src', chops[5]);
+            }, 160);
+
+            setTimeout(function () {
+                $("#chop").attr('src', chops[6]);
+            }, 180);
+
+            setTimeout(function () {
+                $("#chop").attr('src', chops[7]);
+            }, 200);
+
+            setTimeout(function () {
+                $("#chop").attr('src', chops[8]);
+            }, 220);
+
+            setTimeout(function () {
+                $("#chop").attr('src', chops[9]);
+            }, 240);
+
+            setTimeout(function () {
+                $("#chop").attr('src', chops[10]);
+            }, 260);
+
+            setTimeout(function () {
+                $("#chop").attr('src', chops[11]);
+                score++;
+                $("#score").html(score);
+
+            }, 300);
+
+
+
+
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

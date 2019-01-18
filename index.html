@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LumberJacker's</title>
+    <link rel="icon" href="imgs/axe.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="w3.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div id="mod" class="w3-modal">
+        <div class="modal_container w3-card-4 w3-animate-opacity">
+
+            <span onclick="document.getElementById('mod').style.display='none'" class="w3-button w3-display-topright">X</span>
+            <div class="grid_login">
+                <div class="grid_user">
+                    <img class="user_logo" src="imgs/firewood.png" alt="Axe">
+
+                    <h3>Create your account:</h3>
+                    <hr class="hr">
+                </div>
+
+            </div>
+
+            <div class="grid_input">
+                <div>
+                    <i class="i far fa-envelope"></i>
+                </div>
+                <div>
+                    <input class="input e" type="text" placeholder="Email:">
+                </div>
+            </div>
+            <div class="grid_input">
+                <div>
+                    <i class="i far fa-user"></i>
+                </div>
+                <div>
+                    <input class="input u" type="text" placeholder="User:">
+                </div>
+            </div>
+            <div class="grid_input">
+                <div>
+                    <i class="i fas fa-unlock-alt"></i>
+                </div>
+                <div>
+                    <input class="input p" type="password" placeholder="Password:">
+
+                </div>
+            </div>
+            <br>
+            <div class="grid_user">
+                <button class="btn">Submit</button>
+                <br>
+                <br>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="login_container w3-card-4">
+        <div class="grid_login">
+            <div class="grid_user">
+                <img class="user_logo" src="imgs/user.png" alt="Lenhador">
+                <h3>Welcome to LuberJack's</h3>
+                <hr class="hr">
+            </div>
+
+            <div class="grid_input">
+                <div>
+                    <i class="i far fa-user"></i>
+                </div>
+                <div>
+                    <input id="name" class="input u" type="text" placeholder="User:">
+                </div>
+            </div>
+            <div class="grid_input">
+                <div>
+                    <i class="i fas fa-unlock-alt"></i>
+                </div>
+                <div>
+                    <input id="password" class="input p" type="password" placeholder="Password:">
+
+                </div>
+            </div>
+            <br>
+
+            <div class="grid_user">
+                <button class="btn" onclick="game()">Login</button>
+                <br>
+                <br>
+                <span class="forget">
+                    Forgot your password? Click
+                    <a href="#">here</a>
+                </span>
+                <br>
+                <span class="forget">
+                    Or sign up
+                    <a href="#" onclick="$('#mod').css('display','block')">here</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <script>
+        $(".u").focusin(function () {
+            $(".fa-user").css("color", "#0088FF");
+        });
+
+        $(".u").focusout(function () {
+            $(".fa-user").css("color", "#000");
+        });
+
+        $(".e").focusin(function () {
+            $(".fa-envelope").css("color", "#0088FF");
+        });
+
+        $(".e").focusout(function () {
+            $(".fa-envelope").css("color", "#000");
+        });
+
+        $(".p").focusin(function () {
+            $(".fa-unlock-alt").css("color", "#0088FF");
+        });
+
+        $(".p").focusout(function () {
+            $(".fa-unlock-alt").css("color", "#000");
+        });
+
+        function game(){
+            var name = $('#name').val();
+            var password = $('#password').val();
+
+            if(name == "Yuri" && password == "123"){
+                window.location.href = "game.html";
+            }
+            else if(name =="" || password == ""){
+                alert("Please inform user and password")
+            }
+            else{
+                alert("User or password incorret!")
+            }
+        };
+
+
+
+    </script>
+</body>
+
+</html>

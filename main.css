@@ -1,0 +1,215 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+    background-image: url('imgs/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.hr{
+    border: 0.5px solid rgb(177, 170, 170);
+    margin: -5px 0 1vh 0;
+}
+.login_container{
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    margin: 5% 30% 5% 30%;
+    padding: 2vh;     
+    border-radius: 10px;
+}
+
+.modal_container{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    margin: 5% 29% 5% 30%;
+    padding: 2vh;     
+    border-radius: 10px;
+}
+
+.grid_login{
+    display: grid;
+    grid-template-columns: 100%;   
+}
+
+.grid_user{
+    justify-items: center;
+    align-items: center;
+    text-align:center;
+}
+
+.grid_input{
+    display: grid;
+    grid-template-columns: 10% 85%;
+    grid-gap: 5%;  
+    padding: 1vh;
+}
+
+.input{
+    color:black;
+    font-size: 1em; 
+    padding: 1.8vh;
+    width: 100%; 
+    border: 1px solid #988D8D; 
+    outline: 0; 
+    transition: 0.8s;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    
+}
+    
+.i{
+    color:rgb(36, 33, 33);
+    padding: 1.8vh;
+    font-size: 1.2em; 
+    transition: 0.8s;
+    float: right;
+}
+.input[type="text"]:focus{
+    border-color: #0088FF;   
+}
+
+.input[type="password"]:focus{
+    border-color: #0088FF;
+}
+
+.user_logo{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.btn{
+    width: 55%;
+    font-size: 1em;
+    padding: 2vh;
+    border-radius: 16px;
+    background-color: #2D2D2D;
+    color:#fff;
+    border:none;
+    outline: 0;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #0E0E0E;
+}
+
+.forget{
+    margin: 1vh;
+    font-size: 0.8em;
+}
+
+.forget a{
+    color:#0088FF;
+}
+
+.game{
+    background-image: url('imgs/bg-game.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.score{
+    font-size: 1.2em;
+    margin: 1vh;
+    color: white;
+}
+
+.score_board{
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    margin: 5%;
+    padding: 2vh;     
+    border-radius: 10px;
+    background-image: url('imgs/bg-score.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.score_board_grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.score_board_grid>div{
+    color:white;
+    padding: 1vh;
+    font-size: 0.9em;
+}
+.grid_game{
+    display:grid;
+    grid-template-columns: 30% 70%;
+
+}
+.logs{
+    width: 40px;
+}
+
+.login_container_game{
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    margin: 5%;
+    padding: 2vh;     
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .login_container{     
+        margin: 5% 20% 5% 20%;       
+    }
+    .modal_container{     
+        margin: 5% 20% 5% 20%;       
+    }
+   
+    .grid_game{
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (max-width: 820px) and (orientation: landscape) {
+    .login_container_game{  
+        width: 72%;
+        margin: 1% 1% 1% 15vw;  
+    }    
+}
+
+@media only screen and (max-height:400px) and (orientation:landscape){
+    .score_board{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .login_container{    
+        margin: 3%;       
+    }
+    .modal_container{     
+        margin: 3% 3% 3% 3%;       
+    }
+    .grid_game{
+        align-items: center;
+        justify-items: center;
+    }
+    .login_container_game{
+        margin: 3%;  
+    }
+
+    .score_board{
+        height: 50vh;
+    }
+}
